@@ -12,6 +12,7 @@
 #include "VRGame.h"
 #include "ModelTest.h"
 #include "SteeringGame.h"
+#include "FlockingGame.h"
 #include "SceneGraphGame.h"
 #include "Lab5.h"
 #include "Lab4.h"
@@ -29,7 +30,8 @@ int main(int argc, char *argv[])
 
 	// Uncomment this line to run the Rift/Connect/Physics demo as per 
 	// http://www.youtube.com/watch?v=EEbVHxOkTxw
-	SteeringGame game;
+	FlockingGame game;
+
 	game.Run();
 
 	return 0;

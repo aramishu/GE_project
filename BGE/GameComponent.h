@@ -48,6 +48,7 @@ namespace BGE
 		glm::vec3 ambient;
 		glm::vec3 specular;
 		glm::vec3 diffuse; // Will use either this of the array of colours depending on the drawMode setting
+		glm::vec3 wanderTarget; //TODO: create boid subclass to put this into
 		bool initialised;	
 		std::string tag;
 

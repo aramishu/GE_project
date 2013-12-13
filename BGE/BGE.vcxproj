@@ -73,18 +73,22 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Intel\OpenCL SDK\3.0\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>Kinect10.lib;fmodex_vc.lib;winmm.lib;libovrd.lib;glew32.lib;SDL2.lib;SDL2main.lib;SDL2_ttf.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Kinect10.lib;fmodex_vc.lib;winmm.lib;libovrd.lib;glew32.lib;SDL2.lib;SDL2main.lib;SDL2_ttf.lib;opengl32.lib;glu32.lib;OpenCL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Intel\OpenCL SDK\3.0\lib\x86</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AttackingState.cpp" />
     <ClCompile Include="Buddha.cpp" />
+    <ClCompile Include="Flock.cpp" />
+    <ClCompile Include="FlockingGame.cpp" />
     <ClCompile Include="FlockingScenario.cpp" />
     <ClCompile Include="FountainEffect.cpp" />
     <ClCompile Include="IdleState.cpp" />
@@ -143,8 +147,11 @@
   <ItemGroup>
     <ClInclude Include="AttackingState.h" />
     <ClInclude Include="Buddha.h" />
+    <ClInclude Include="flock.h" />
+    <ClInclude Include="FlockingGame.h" />
     <ClInclude Include="FlockingScenario.h" />
     <ClInclude Include="FountainEffect.h" />
+    <ClInclude Include="gpucontroller.h" />
     <ClInclude Include="IdleState.h" />
     <ClInclude Include="Lab4.h" />
     <ClInclude Include="Lab5.h" />
@@ -226,6 +233,7 @@
     <None Include="Content\TriangleShader.fragmentshader" />
     <None Include="Content\TriangleShader.vertexshader" />
     <None Include="Particles.cd" />
+    <None Include="wander.cl" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dependancies\bullet-2.81-rev2613\build\vs2010\BulletCollision.vcxproj">
